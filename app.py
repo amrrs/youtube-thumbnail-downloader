@@ -6,7 +6,7 @@ st.text('Enter a Youtube Video Complete URL whose thumbnail you would like to do
 
 url = st.text_input(label = 'Enter a Youtube Video Complete URL')
 
-id = url.split('=')[-1]
+id = url[url.find('=')+1:url.find('&')]
 
 max_res = 'https://img.youtube.com/vi/'+id+'/maxresdefault.jpg'
 
